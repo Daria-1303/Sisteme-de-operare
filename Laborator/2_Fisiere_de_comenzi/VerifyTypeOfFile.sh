@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#creati un script care verifica daca un fisier este fisier normal sau legatura simbolica
+
 fisier1=$1
 
 if test -f $fisier1
