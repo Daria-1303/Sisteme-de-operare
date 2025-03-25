@@ -1,5 +1,3 @@
-#!/bin/bash
-
 
 #creati 3 variabile
 var1=ana
