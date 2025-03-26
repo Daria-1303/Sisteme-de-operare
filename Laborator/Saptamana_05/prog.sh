@@ -20,14 +20,17 @@ count=0
 
 for arg in "$DIR"/*;
 do
-    if [ -d "$arg" ]; then
+    if [ -d "$arg" ] 
+    then
         rec=`bash "$0" "$arg"`
         count=`expr $count + $rec`
     fi
 
-    if [ -f "$arg" ]; then
-        lines=`cat $arg | grep -E "^[A-Z][a-zA-Z0-9_, ]*\.$" | wc -w`
-        if [ $lines -ne 0 ]; then
+    if [ -f "$arg" ]
+    then
+        lines=`cat $arg | grep -E "^[A-Z][a-zA-Z0-9_, ]*\.$" | wc -l`
+        if test $lines -ne 0 
+        then
             count=`expr $count + $lines`
         fi
     fi
