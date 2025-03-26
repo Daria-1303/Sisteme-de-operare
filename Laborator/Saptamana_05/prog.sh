@@ -4,13 +4,17 @@
     # incepe cu A-Z
     # contine a-z A-Z 0-9, _, ,
     #se incheie cu punct
-#afisam pe ecran count 
+
+#afisam pe ecran count
+
+# mai afisam un count pt verificare adrese ip
 
 # m = cat | grep | wc -l 
 
 DIR=$1
 
 count=0
+ipCount=0
 
 
 # for file in $(find $DIR -type f); do
@@ -28,7 +32,8 @@ do
 
     if [ -f "$arg" ]
     then
-        lines=`cat $arg | grep -E "^[A-Z][a-zA-Z0-9_, ]*\.$" | wc -l`
+        #lines=`cat $arg | grep -E "^[A-Z][a-zA-Z0-9_, ]*\.$" | wc -l`
+        lines=`cat $arg | grep -E "" | wc -l`
         if test $lines -ne 0 
         then
             count=`expr $count + $lines`
