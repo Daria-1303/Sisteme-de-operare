@@ -18,7 +18,7 @@ count=0
 #     count=$(($count + $lines))
 # done
 
-for arg in "$DIR"/*;
+for arg in "$DIR"/*
 do
     if [ -d "$arg" ] 
     then
