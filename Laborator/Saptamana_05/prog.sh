@@ -33,7 +33,7 @@ do
     if [ -f "$arg" ]
     then
         #lines=`cat $arg | grep -E "^[A-Z][a-zA-Z0-9_, ]*\.$" | wc -l`
-        lines=`cat $arg | grep -E "" | wc -l`
+        lines=`cat $arg | grep -E "..." | wc -l`
         if test $lines -ne 0 
         then
             count=`expr $count + $lines`
